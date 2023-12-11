@@ -8,8 +8,13 @@
     font-family: 'HEADLINE';
 }
 
-@font-face {
+/* @font-face {
     src: url(../font/HeadLineA.ttf);
+    font-family: 'HEADLINEA';
+} */
+
+@font-face {
+    src: url(../font/HeadLineA.woff) format(woff);
     font-family: 'HEADLINEA';
 }
 
