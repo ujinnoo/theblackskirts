@@ -1,0 +1,25 @@
+/* - 한글 : U+AC00-D7A3
+- 라틴 영문 대문자(A-Z) : U+0041-005A
+- 라틴 영문 소문자(a-z):  U+0061-007A 
+- 아라비아 숫자(0-9) : U+0030-0039 */
+
+@font-face {
+    src: url(../font/HMKMRHD.TTF);
+    font-family: 'HEADLINE';
+}
+
+@font-face {
+    src: url(../font/HeadLineA.ttf);
+    font-family: 'HEADLINEA';
+}
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Pretendard-Regular';
+}

@@ -1,0 +1,120 @@
+body {
+    background: #000;
+    color: #fff;
+    overflow-y: hidden;
+}
+
+/* film-list 영상 리스트 */
+#film-list {
+    float: left;
+    border-right: 1px solid #fff;
+    width: 30vw;
+    height: 100vh;
+}
+#film-list h1 {
+    padding: 1vw 1vw;
+    font-family: 'HEADLINEA';
+    font-size: 8em;
+    font-weight: 10;
+}
+#film-list h1 a {
+    color: #fff;
+    text-decoration: none;
+}
+#film-list h3 {
+    margin: 10% 5% 5% 5%;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+#film-list li {
+    padding: 5%;
+    border-top: solid 1px #fff;
+}
+#film-list li:hover {
+    background-color: #fff;
+    color: #000;
+}
+.list-bottom {
+    border-bottom: solid 1px #fff;
+}
+.list-selected {
+    background-color: #fff;
+    color: #000;
+}
+
+/* film-content 콘텐츠 */
+.film-content {
+    float: left;
+    width: 67vw;
+    height: 100vh;
+    padding: 5vw 1vw 0 1vw;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    text-align: center;
+}
+.film-content video {
+    width: 98%;
+}
+.film-content h2 {
+    text-align: left;
+    font-size: 2rem;
+    margin: 1vw 0 0 1vw;
+}
+.film-content p {
+    text-align: left;
+    margin: 1vw 0 0 1vw;
+    line-height: 1.5;
+    color: #717171;
+}
+.film-content a {
+    color: #c2c2c2;
+}
+.display-none {
+    display: none;
+}
+.display-block {
+    display: block;
+}
+
+/* GNB */
+nav {
+    position: absolute;
+    right: 0;
+    text-align: right;
+    width: 67vw;
+    float: right;
+    margin-right: 30px;
+}
+nav li {
+    width: 3.5vw;
+    text-align: center;
+    display: inline-block;
+    margin: 20px 0;
+    padding: 0 15px;
+    color: #fff;
+}
+nav li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* GNB 호버시 한글 변경 */
+.nav1::before {
+    content: 'ABOUT';
+}
+.nav1:hover::before {
+    content: '검정치마';
+}
+
+.nav3::before {
+    content: 'ALBUM';
+}
+.nav3:hover::before {
+    content: '앨범';
+}
+.nav4::before {
+    content: 'CONCERT';
+}
+.nav4:hover::before {
+    content: '공연';
+}

@@ -1,0 +1,147 @@
+body {
+    background: #000;
+    color: #fff;
+    overflow: hidden;
+}
+h1 {
+    padding: 1vw 1vw;
+    font-family: 'HEADLINEA';
+    font-size: 8em;
+    font-weight: 10;
+}
+h1 a {
+    color: #fff;
+    text-decoration: none;
+}
+section {
+    height: 30vw;
+}
+
+/* 마우스 커서 변경(view) */
+/* .cursor {
+    z-index: 10;
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #fff;
+    transition: 0.1s ease-out;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    mix-blend-mode: difference;
+}
+
+.album img:hover ~ .cursor {
+    transform: translate(-50%, -50%) scale(3);
+} */
+
+/* .album img:hover + .cursor::before {
+    content: "view";
+    color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+} */
+
+
+/* 정규 앨범 */
+#albums {
+    margin-top: 1vw;
+    border-top: 1px solid #fff;
+    padding: 3vw 2vw 0 1vw;
+}
+.text-border {
+    border-left: 1px solid #fff;
+}
+.albums-text {
+    height: 100%;
+    display: inline-block;
+    position: absolute;
+    margin-top: -3vw;
+    margin-left: 2vw;
+    padding: 3vw 0 0 2vw;
+}
+.albums-text h2 {
+    font-size: 1.5em;
+}
+.albums-text p {
+    margin-top: 1.5vw;
+    line-height: 1.5;
+    font-size: 0.8vw;
+}
+
+/* 미니 앨범 */
+#mini-albums {
+    margin-top: -10vw;
+    border-top: 1px solid #fff;
+    padding: 3vw 2vw 0 1vw;
+}
+
+i a {
+    font-size: 0.7vw;
+    color: #c0c0c0;
+}
+
+/* album scroll */
+.conteudo {
+    width: 75vw;
+    display: inline-block;
+}
+.carrousel {
+    display: grid;
+    grid-auto-flow: column;
+    scroll-behavior: auto;
+    gap: 1.2rem;
+    overflow-y: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+}
+.carraousle::-webkit-scrollbar {
+    display: none;
+}
+.album {
+    scroll-snap-align: start;
+}
+.album img {
+    height: 17vw;
+}
+
+
+/* GNB */
+nav {
+    float: right;
+    margin-right: 30px;
+}
+nav li {
+    width: 3.5vw;
+    text-align: center;
+    display: inline-block;
+    margin: 20px 0;
+    padding: 0 15px;
+    color: #fff;
+}
+nav li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* GNB 호버시 한글 변경 */
+.nav1::before {
+    content: 'ABOUT';
+}
+.nav1:hover::before {
+    content: '검정치마';
+}
+.nav2::before {
+    content: 'FILM';
+}
+.nav2:hover::before {
+    content: '영상';
+}
+.nav4::before {
+    content: 'CONCERT';
+}
+.nav4:hover::before {
+    content: '공연';
+}

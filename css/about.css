@@ -1,0 +1,161 @@
+body {
+    background: #000;
+    color: #fff;
+}
+h1 {
+    padding: 1vw 1vw;
+    font-family: 'HEADLINEA';
+    font-size: 8em;
+    font-weight: 10;
+}
+h1 a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* flip */
+.container {
+    display: grid;
+    width: 90%;
+    margin: 10vw auto;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 2vw;
+}
+.front img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.card {
+    position: relative;
+}
+.back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #fff;
+    padding: 15px;
+    transform: perspective(600px) rotateY(180deg);
+    transition: transform .5s linear 0s;
+    backface-visibility: hidden;
+    border-radius: 50%;
+}
+.back p {
+    color: #000;
+    position: absolute;
+    text-align: center;
+    line-height: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.back p b {
+    cursor: pointer;
+    transition: all ease 0.2s;
+}
+.back p b::after {
+    content: "";
+    position: absolute;
+    bottom: 5px;
+    height: 1px;
+    width: 100%;
+    left: 0;
+    background-color: #000;
+    transition: 0.3s;
+    transition-timing-function: ease-in-out;
+    transform: scaleX(0);
+}
+.back p b:hover::after {
+    transform: scaleX(1);
+}
+/* .back p b:hover {
+    color: #e895ff;
+    transition: all ease 0.2s;
+} */
+.front {
+    transform: perspective(600px) rotateY(0deg);
+    transition: transform .5s linear 0s;
+}
+.card:hover>.front {
+    transform: perspective(600px) rotateY(-180deg);
+}
+.card:hover>.back {
+    transform: perspective(600px) rotateY(0deg);
+}
+
+/* stickers */
+#sticker1 {
+    position: absolute;
+    width: 200px;
+    top: 20%;
+    left: 15%;
+    display: none;
+}
+#sticker2 {
+    position: absolute;
+    width: 300px;
+    top: 70%;
+    left: 25%;
+    display: none;
+}
+#sticker3 {
+    position: absolute;
+    width: 180px;
+    top: 10%;
+    left: 45%;
+    display: none;
+}
+#sticker4 {
+    position: absolute;
+    width: 300px;
+    top: 60%;
+    left: 70%;
+    display: none;
+}
+#sticker5 {
+    position: absolute;
+    width: 200px;
+    top: 6%;
+    left: 85%;
+    display: none;
+}
+
+/* GNB */
+nav {
+    float: right;
+    margin-right: 30px;
+}
+nav li {
+    width: 3.5vw;
+    text-align: center;
+    display: inline-block;
+    margin: 20px 0;
+    padding: 0 15px;
+    color: #fff;
+}
+nav li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* GNB 호버시 한글 변경 */
+.nav2::before {
+    content: 'FILM';
+}
+.nav2:hover::before {
+    content: '영상';
+}
+.nav3::before {
+    content: 'ALBUM';
+}
+.nav3:hover::before {
+    content: '앨범';
+}
+.nav4::before {
+    content: 'CONCERT';
+}
+.nav4:hover::before {
+    content: '공연';
+}

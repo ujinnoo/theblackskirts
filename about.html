@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>검정치마</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/about.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <link rel="icon" href="./img/favicon.png" type="image/x-icon">
+
+</head>
+<body>
+    <!-- header 헤더 -->
+    <header>
+        <nav>
+            <ul>
+                <a href="about.html"><li class="nav1">검정치마</li></a>
+                <a href="film.html"><li class="nav2"></li></a>
+                <a href="album.html"><li class="nav3"></li></a>
+                <a href="concert.html"><li class="nav4"></li></a>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- main -->
+    <main>
+        <h1><a href="index.html">검정치마</a></h1>
+
+
+        <div class="container">
+
+            <div class="card">
+                <div class="front">
+                    <img src="./img/album/02.webp">
+                </div>
+                <div class="back">
+                    <p>2008년 데뷔<br><b onclick="show1()">정규 1집 <201></b></p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="front">
+                        <img src="./img/album/03.webp">
+                    </div>
+                    <div class="back">
+                    <p>한국 이름<br><b onclick="show2()">조휴일</b></p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="front">
+                    <img src="./img/album/04-2.png">
+                </div>
+                <div class="back">
+                    <p>출생<br><b onclick="show3()">1982년 12월 5일</b></p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="front">
+                    <img src="./img/album/05-2.png">
+                </div>
+                <div class="back">
+                    <p>MBTI<br><b onclick="show4()">INFP</b></p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="front">
+                    <img src="./img/album/06.webp">
+                </div>
+                <div class="back">
+                    <p><b onclick="show5()">버클리 음악 대학</b> 중퇴</p>
+                </div>
+            </div>
+        </div>
+
+        <img src="./img/sticker_01.jpeg" id="sticker1" alt="">
+        <img src="./img/sticker_02.jpeg" id="sticker2" alt="">
+        <img src="./img/sticker_03.png" id="sticker3" alt="">
+        <img src="./img/sticker_04.jpeg" id="sticker4" alt="">
+        <img src="./img/sticker_05.jpeg" id="sticker5" alt="">
+    </main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/draggabilly/3.0.0/draggabilly.pkgd.min.js"></script>
+<script>
+    // 드래그 가능한 스티커
+    let sticker1 = document.getElementById('sticker1');
+    let sticker2 = document.getElementById('sticker2');
+    let sticker3 = document.getElementById('sticker3');
+    let sticker4 = document.getElementById('sticker4');
+    let sticker5 = document.getElementById('sticker5');
+    let drag1 = new Draggabilly(sticker1);
+    let drag2 = new Draggabilly(sticker2);
+    let drag3 = new Draggabilly(sticker3);
+    let drag4 = new Draggabilly(sticker4);
+    let drag5 = new Draggabilly(sticker5);
+
+    // 스티커 block, none + background 색 변경
+    function show1() {
+        var sticker = document.getElementById('sticker1');
+        sticker.style.display = (sticker.style.display === 'block') ? 'none' : 'block';
+        document.body.style.background = 'red';
+    }
+    function show2() {
+        var sticker = document.getElementById('sticker2');
+        sticker.style.display = (sticker.style.display === 'block') ? 'none' : 'block';
+        document.body.style.background = '#3ccc40';
+    }
+    function show3() {
+        var sticker = document.getElementById('sticker3');
+        sticker.style.display = (sticker.style.display === 'block') ? 'none' : 'block';
+        document.body.style.background = 'blue';
+    }
+    function show4() {
+        var sticker = document.getElementById('sticker4');
+        sticker.style.display = (sticker.style.display === 'block') ? 'none' : 'block';
+        document.body.style.background = '#ff79f4';
+    }
+    function show5() {
+        var sticker = document.getElementById('sticker5');
+        sticker.style.display = (sticker.style.display === 'block') ? 'none' : 'block';
+        document.body.style.background = 'black';
+    }
+</script>
+</body>
+</html>

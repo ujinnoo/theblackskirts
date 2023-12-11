@@ -1,0 +1,90 @@
+body {
+    background: #000;
+    color: #fff;
+    overflow: hidden;
+}
+h1 {
+    padding: 1vw 1vw;
+    font-family: 'HEADLINEA';
+    font-size: 8em;
+    font-weight: 10;
+}
+h1 a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* slider */
+.slider {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.slider-wrapper {
+    position: absolute;
+    top: 55%;
+    transform: translateY(-50%);
+    width: 10500px;
+    padding: 0 600px;
+    display: flex;
+    align-items: center;
+    gap: 100px;
+}
+.slide {
+    height: 500px;
+}
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.white {
+    color: white;
+}
+
+footer {
+    line-height: 1.8;
+    position: absolute;
+    color: #4c4c4c;
+    left: 2vw;
+    bottom: 3vw;
+}
+
+/* GNB */
+nav {
+    float: right;
+    margin-right: 30px;
+}
+nav li {
+    width: 3.5vw;
+    text-align: center;
+    display: inline-block;
+    margin: 20px 0;
+    padding: 0 15px;
+    color: #fff;
+}
+nav li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* GNB 호버시 한글 변경 */
+.nav1::before {
+    content: 'ABOUT';
+}
+.nav1:hover::before {
+    content: '검정치마';
+}
+.nav2::before {
+    content: 'FILM';
+}
+.nav2:hover::before {
+    content: '영상';
+}
+.nav3::before {
+    content: 'ALBUM';
+}
+.nav3:hover::before {
+    content: '앨범';
+}
